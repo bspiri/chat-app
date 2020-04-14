@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import Contact from "./components/Contact";
 
 function App() {
@@ -8,17 +8,17 @@ function App() {
       <Contact
         name="Shelly Jennings"
         avatar="https://randomuser.me/api/portraits/women/40.jpg"
-        online="true"
+        online={true}
       />
       <Contact
         name="Travis Payne"
         avatar="https://randomuser.me/api/portraits/men/0.jpg"
-        online=""
+        online={false}
       />
       <Contact
         name="Gregory Butler"
         avatar="https://randomuser.me/api/portraits/men/76.jpg"
-        online="true"
+        online={true}
       />
     </div>
   );

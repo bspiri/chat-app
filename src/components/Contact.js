@@ -5,28 +5,25 @@ import "./styles.css";
 class Contact extends React.Component {
   constructor(props) {
     super(props);
-    // this.name = name;
-    // this.avatar = avatar;
-    // this.pnline = online;
     this.state = {
       online: this.props.online,
     };
   }
+  handleClick = () => {
+    // console.log(this.state.online);
+    const status = this.state.online === true ? false : true;
+    this.setState({ online: status });
+  };
   render() {
     return (
       <div className="Contact">
-        <img className="avatar" src={this.props.avatar} />
+        <img className="avatar" src={this.props.avatar} alt="" />
         <div className="status">
           <h6 className="name">{this.props.name}</h6>
           <span
             className={this.state.online ? "status-online" : "status-offline"}
-            onClick={(event) => {
-              const newOnline = !this.state.online;
-              this.setState({ online: newOnline });
-            }}
-            // className={this.props.online ? "status-online" : "status-offline"}
           ></span>
-          <p className="status-text">
+          <p onClick={this.handleClick} className="status-text">
             {this.props.online ? "online" : "offline"}
           </p>
         </div>
