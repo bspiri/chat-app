@@ -24,7 +24,7 @@ class Contact extends React.Component {
             className={this.state.online ? "status-online" : "status-offline"}
           ></span>
           <p onClick={this.handleClick} className="status-text">
-            {this.props.online ? "online" : "offline"}
+            {this.state.online ? "online" : "offline"}
           </p>
         </div>
       </div>
